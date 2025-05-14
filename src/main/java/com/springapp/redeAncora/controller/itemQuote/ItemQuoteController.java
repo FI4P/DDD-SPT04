@@ -21,7 +21,7 @@ public class ItemQuoteController {
     }
 
     @PostMapping
-    public ResponseEntity<ItemQuoteResponseDTO> createItemQuote(@RequestBody ItemQuoteRequestDTO body) {
+    public ResponseEntity<ItemQuoteResponseDTO> save(@RequestBody ItemQuoteRequestDTO body) {
         ItemQuoteResponseDTO item = itemQuoteService.save(body);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(item);
